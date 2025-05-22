@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+/* font-family: "EB Garamond", serif; */
+/* Основные настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "EB Garamond", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Темы */
+.light-theme {
+  background-color: #ffffff;
+  color: #333;
+}
+.light-theme .header,
+.light-theme .footer {
+  background-color: #83aedf;
+  color: white;
+}
+
+.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+.dark-theme .header,
+.dark-theme .footer {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* Шапка сайта */
+.header {
+  padding: 20px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fafafa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.menu li a {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+.menu li a:hover {
+  opacity: 0.7;
+}
+
+.theme-btn {
+  font-size: 1.2rem;
+  color: inherit;
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+.theme-btn:hover {
+  transform: rotate(90deg);
+}
+
+.burger {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/*секция с видео*/
+video{
+  position: fixed;
+  min-width: 50%;
+  min-height: 60%;
+  object-fit: fill;
+
+
+}
+
+/* Меню на мобильных */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #222;
+    flex-direction: column;
+    display: none;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 1rem 0;
+  }
+}
+
